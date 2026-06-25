@@ -48,7 +48,7 @@ $categorias = obtenerCategorias($pdo);
                 <?php echo $editar ? '✏️ Editar producto' : '➕ Agregar nuevo suplemento'; ?>
             </h2>
 
-            <form method="POST" action="../backend/procesar_suplemento.php" enctype="multipart/form-data">
+            <form method="POST" action="/backend/procesar_suplemento.php" enctype="multipart/form-data">
                 <input type="hidden" name="accion" value="<?php echo $editar ? 'editar' : 'crear'; ?>">
                 <input type="hidden" name="id" value="<?php echo $editar['id'] ?? 0; ?>">
                 <input type="hidden" name="imagen_actual"

@@ -7,7 +7,7 @@
 <title><?php echo isset($tituloPagina) ? $tituloPagina . ' | ElvisTrofia' : 'ElvisTrofia'; ?></title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
@@ -46,7 +46,7 @@
             <?php if (isset($_SESSION['usuario_rol']) && $_SESSION['usuario_rol'] === 'admin'): ?>
                 <li><a href="admin_suplementos.php">⚙ Admin Suplementos</a></li>
             <?php endif; ?>
-            <li><a href="../backend/logout.php">Cerrar sesión</a></li>
+            <li><a href="/backend/logout.php">Cerrar sesión</a></li>
         <?php else: ?>
             <li><a href="login.php">Acceso</a></li>
             <li><a href="registro.php">Crear una cuenta</a></li>

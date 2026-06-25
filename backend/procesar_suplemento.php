@@ -5,7 +5,7 @@ require_once __DIR__ . '/funciones.php';
 
 
 if (!isset($_SESSION['usuario_rol']) || $_SESSION['usuario_rol'] !== 'admin') {
-    header('Location: ../frontend/index.php');
+    header('Location: /index.php');
     exit;
 }
 
@@ -23,7 +23,7 @@ if ($accion === 'eliminar' && isset($_GET['id'])) {
     eliminarSuplemento($pdo, $id);
     $_SESSION['msg_suplemento'] = 'Suplemento eliminado correctamente.';
     $_SESSION['msg_tipo'] = 'exito';
-    header('Location: ../frontend/admin_suplementos.php');
+    header('Location: /admin_suplementos.php');
     exit;
 }
 
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($accion, ['crear', 'editar
         $_SESSION['msg_suplemento'] = 'Por favor completa todos los campos obligatorios.';
         $_SESSION['msg_tipo'] = 'error';
         $redir = $id > 0 ? "admin_suplementos.php?editar=$id" : 'admin_suplementos.php';
-        header("Location: ../frontend/$redir");
+        header("Location: /$redir");
         exit;
     }
 
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($accion, ['crear', 'editar
             $_SESSION['msg_suplemento'] = 'Imagen no válida (máx 5MB, formatos: jpg, png, webp, gif).';
             $_SESSION['msg_tipo'] = 'error';
             $redir = $id > 0 ? "admin_suplementos.php?editar=$id" : 'admin_suplementos.php';
-            header("Location: ../frontend/$redir");
+            header("Location: /$redir");
             exit;
         }
     }
@@ -80,10 +80,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($accion, ['crear', 'editar
 
     $_SESSION['msg_suplemento'] = $id > 0 ? 'Suplemento actualizado correctamente.' : 'Suplemento agregado correctamente.';
     $_SESSION['msg_tipo'] = 'exito';
-    header('Location: ../frontend/admin_suplementos.php');
+    header('Location: /admin_suplementos.php');
     exit;
 }
 
 
-header('Location: ../frontend/admin_suplementos.php');
+header('Location: /admin_suplementos.php');
 exit;

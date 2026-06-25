@@ -20,5 +20,5 @@ if ($id) {
     }
 }
 
-header('Location: ../frontend/listado.php');
+header('Location: /listado.php');
 exit;

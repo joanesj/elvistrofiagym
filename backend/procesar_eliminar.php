@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
 
     $stmt = $pdo->prepare("DELETE FROM usuarios WHERE id = ?");
     if ($stmt->execute([$id])) {
-        header("Location: ../frontend/listado.php?msg=UsuarioEliminado");
+        header("Location: /listado.php?msg=UsuarioEliminado");
     } else {
         echo "Error al intentar eliminar.";
     }

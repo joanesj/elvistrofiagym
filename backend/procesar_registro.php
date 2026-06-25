@@ -3,7 +3,7 @@ session_start();
 require_once __DIR__ . '/funciones.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: ../frontend/registro.php');
+    header('Location: /registro.php');
     exit;
 }
 
@@ -40,7 +40,7 @@ if (empty($errores) && correoExiste($pdo, $correo)) {
 
 if (!empty($errores)) {
     $_SESSION['errores_registro'] = $errores;
-    header('Location: ../frontend/registro.php');
+    header('Location: /registro.php');
     exit;
 }
 
@@ -49,5 +49,5 @@ $fechaNacimiento = sprintf('%04d-%02d-%02d', (int) $anio, (int) $mes, (int) $dia
 registrarUsuario($pdo, $nombre, $apellido, $fechaNacimiento, $correo, $password);
 
 $_SESSION['mensaje_login'] = 'Cuenta creada con éxito. Ahora puedes iniciar sesión.';
-header('Location: ../frontend/login.php');
+header('Location: /login.php');
 exit;

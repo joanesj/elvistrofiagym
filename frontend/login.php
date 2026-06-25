@@ -19,7 +19,7 @@ require_once __DIR__ . '/includes/header.php';
             </p>
         <?php endif; ?>
 
-        <form action="../backend/procesar_login.php" method="POST">
+        <form action="/backend/procesar_login.php" method="POST">
             <label for="correo">Correo electrónico</label>
             <input type="email" id="correo" name="correo" required>
 

@@ -15,7 +15,7 @@ require_once __DIR__ . '/includes/header.php';
             </p>
         <?php endif; ?>
 
-        <form action="../backend/procesar_miembro.php" method="POST">
+        <form action="/backend/procesar_miembro.php" method="POST">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" required>
 
