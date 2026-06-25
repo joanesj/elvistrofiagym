@@ -1,6 +1,8 @@
 FROM php:8.2-apache
 
-COPY backend/ /var/www/html/
-COPY frontend/ /var/www/html/frontend/
+RUN docker-php-ext-install pdo pdo_mysql
+
+COPY backend/ /var/www/html/backend/
+COPY frontend/ /var/www/html/
 
 EXPOSE 80
