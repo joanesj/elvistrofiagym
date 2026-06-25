@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $correo = trim($_POST['correo'] ?? '');
 $password = $_POST['password'] ?? '';
 
-if ($correo === 'admin@gmail.com' && $password === '123') {
+if ($correo === 'admin@gmail.com' && $password === '1234567') {
     $_SESSION['usuario_id'] = 0;
     $_SESSION['usuario_nombre'] = 'Admin Principal';
     $_SESSION['usuario_rol'] = 'admin';
