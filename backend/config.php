@@ -1,11 +1,11 @@
 <?php
 
 
-$host = getenv('DB_HOST') ?: 'localhost';
-$port = getenv('DB_PORT') ?: '3306';
-$db = getenv('DB_NAME') ?: 'elvistrofia';
-$user = getenv('DB_USER') ?: 'root';
-$pass = getenv('DB_PASS') ?: '';
+$host = getenv('DB_HOST') ?: '3h6pe1.h.filess.io';
+$port = getenv('DB_PORT') ?: '3307';
+$db = getenv('DB_NAME') ?: 'elvistrofia_youthwrote';
+$user = getenv('DB_USER') ?: 'elvistrofia_youthwrote';
+$pass = getenv('DB_PASS') ?: '32aedce810e8a0c64feaea6e515b520b14b38fff';
 
 try {
     $pdo = new PDO(
