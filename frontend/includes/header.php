@@ -19,7 +19,7 @@
     <a href="index.php" class="logo">ELVIS<span>TROFIA</span></a>
 
     <a
-        href="<?php echo isset($_SESSION['usuario_id']) ? '../backend/logout.php' : 'login.php'; ?>"
+        href="<?php echo isset($_SESSION['usuario_id']) ? '/backend/logout.php' : 'login.php'; ?>"
         class="login-icon"
         title="<?php echo isset($_SESSION['usuario_id'])
             ? 'Cerrar sesión (' . htmlspecialchars($_SESSION['usuario_nombre']) . ')'

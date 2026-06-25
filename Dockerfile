@@ -8,7 +8,7 @@ COPY . /var/www/html/
 
 RUN echo '<VirtualHost *:80>\n\
     DocumentRoot /var/www/html/frontend\n\
-    <Directory /var/www/html>\n\
+    <Directory /var/www/html/frontend>\n\
         AllowOverride All\n\
         Require all granted\n\
     </Directory>\n\
